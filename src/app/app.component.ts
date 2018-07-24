@@ -9,12 +9,6 @@ import { Post } from './post';
 export class AppComponent {
   posts: Array<Post>;
 
-  /*
-  @Input() newPostTitle: string;
-
-  @Input() newPostContent: string;
-  */
-
   constructor(){
     this.posts = new Array<Post>();
   }
