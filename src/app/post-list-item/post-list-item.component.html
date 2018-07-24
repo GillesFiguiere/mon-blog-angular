@@ -1,0 +1,14 @@
+<div class="gf-post list-group-item" [ngClass]="{'list-group-item-success': postContent.loveIts > 0, 'list-group-item-danger': postContent.loveIts < 0}">
+    <div class="row">
+      <h3 class="col-sm-10"><i class="glyphicon glyphicon-asterisk"></i> {{postContent.title}}</h3>
+      <div class="gf-date col-sm-2 text-right"><span class="badge">{{postContent.created_at | date: 'short' }}</span></div>
+    </div>
+    <hr />
+    <div class="row">
+        <p class="col-sm-12 text-justify">{{postContent.content}}</p>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-success btn-secondary" (click)="onLike()"><i class="glyphicon glyphicon-thumbs-up"></i> J'aime</button>
+      <button class="btn btn-danger btn-secondary" (click)="onDislike()"><i class="glyphicon glyphicon-thumbs-down"></i> Je n'aime pas</button>
+    </div>
+</div>
